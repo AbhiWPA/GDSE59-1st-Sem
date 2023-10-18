@@ -17,5 +17,7 @@ public class Main {
         }else {
             System.out.println("Else condition is called");
         }
+
+        System.out.println("Updated");
     }
 }
