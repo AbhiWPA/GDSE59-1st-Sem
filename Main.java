@@ -18,6 +18,6 @@ public class Main {
             System.out.println("Else condition is called");
         }
 
-        System.out.println("Updated");
+        System.out.println("class updated");
     }
 }
