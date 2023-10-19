@@ -6,7 +6,7 @@ pipeline {
     }
 
     triggers {
-        pollSCM '*/5 * * * *'
+        pollSCM '* * * * *'
     }
 
     stages {
@@ -14,7 +14,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
+                    cd testPackage
+                    pip install -r test.txt
                 '''
             }
         }
@@ -22,7 +23,9 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff.."
+                    cd testPackage
+                    java Main.java
+                    java Main.java --name=Kamal
                 '''
             }
         }
