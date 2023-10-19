@@ -11,6 +11,19 @@ package testPackage;
 public class Main {
     public static void main(String[] args) {
         System.out.println("testPackage/Main.java is called");
-        System.out.println("Name parameter value is : "+args[0].toString());
+        String name = null;
+
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].startsWith("--name=")) {
+                name = args[i].substring(7); // Get the value after "--name="
+                break;
+            }
+        }
+
+        if (name != null) {
+            System.out.println("Name is: " + name);
+        } else {
+            System.out.println("Name parameter not provided.");
+        }
     }
 }
