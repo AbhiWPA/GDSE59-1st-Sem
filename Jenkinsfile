@@ -15,7 +15,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                     cd testPackage
-                    pip install -r test.txt
                 '''
             }
         }
