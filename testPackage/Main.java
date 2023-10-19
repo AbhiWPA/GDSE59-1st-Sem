@@ -11,5 +11,6 @@ package testPackage;
 public class Main {
     public static void main(String[] args) {
         System.out.println("testPackage/Main.java is called");
+        System.out.println("Name parameter value is : "+args[0].toString());
     }
 }
